@@ -1,0 +1,31 @@
+.PersonDataTable{
+    border: 1px solid #eee;
+    table-layout: fixed;
+    min-width: 500px;
+    margin-bottom: 20px;
+}
+.PersonDataTable thead {
+    font-weight: bold;
+    padding: 1px;
+    background: #efefef;
+    border: 1px solid #dddddd;
+}
+.PersonDataTable td{
+    padding: 5px;
+    border: 1px solid #eee;
+    text-align: center;
+    width: auto;
+}
+.PersonDataTable tbody tr:nth-child(odd){
+    background: #fff;
+}
+.PersonDataTable tbody tr:nth-child(even){
+    background: #F7F7F7;
+}
+.PersonDataTable .surname {
+    width: auto;
+}
+.PersonDataTable .id {
+    width: 25px;
+    text-align: center;
+}

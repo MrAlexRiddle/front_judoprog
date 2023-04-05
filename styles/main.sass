@@ -1,0 +1,387 @@
+@import colors
+
+$shadow-item: 0 0 8px $shadow-main
+$shadow-small: 0 0 4px $shadow-main
+$border-rad-small: 3px
+
+%width-fill
+  width: 100%
+  width: -moz-available
+  width: -webkit-fill-available
+  width: fill-available
+
+%box-small
+  padding: 5px
+  background: $background-small
+  border-radius: $border-rad-small
+  box-shadow: $shadow-small
+
+%box-medium
+  padding: 5px
+  background: $background-medium
+  border-radius: $border-rad-small
+  box-shadow: $shadow-small
+
+*
+
+#root
+  display: flex
+  justify-content: space-between
+  margin: 2px
+
+
+.popup-overlay
+  margin: 10px
+
+.popup-content
+  width: 90%
+  min-width: 300px
+  margin: 10px
+
+  .competitions-popup
+    background: $background-popup
+    padding: 10px
+    border-radius: 3px
+    box-shadow: $shadow-item
+
+.post-popup-box
+  min-width: 300px
+  max-width: 600px
+  width: 80%
+  margin: auto
+
+.competitions-post-popup
+  background: $background-popup
+  padding: 10px
+  border-radius: 3px
+  box-shadow: $shadow-item
+  min-width: 300px
+
+.competitions-page
+  margin: 2%
+  width: 100%
+
+  .competitions-area
+    width: 100%
+
+    .competitions-data-table
+      width: 100%
+      margin: auto
+
+    .competitions-item
+      min-width: 300px
+      max-width: 600px
+      background: $background-item
+      padding: 10px
+      margin: 20px auto
+      border-radius: 3px
+      box-shadow: $shadow-item
+      display: flex
+      flex-direction: column
+      width: 80%
+
+      .info
+        width: 100%
+        display: flex
+        flex-direction: column
+
+        .dates-and-location
+          width: 100%
+          display: flex
+          flex-direction: row
+
+          .location
+            margin-left: auto
+
+            .box
+              margin: 4px
+              @extend %box-small
+
+          .dates
+            margin-right: auto
+
+            .box
+              margin: 4px
+              @extend %box-small
+
+        .name-ages
+          width: 100%
+          margin: 20px auto
+
+          .body
+            display: flex
+            flex-direction: column
+            min-width: 150px
+            @extend %box-medium
+
+            .name
+              @extend %box-small
+              margin: 5px auto
+              text-align: center
+
+            .ages
+              margin: 5px auto
+
+        .gender-weight
+          margin: 5px auto
+          width: 100%
+
+          .box
+            display: flex
+            flex-direction: row
+            @extend %box-medium
+
+            .title
+              margin: 4px
+
+            .body
+              margin-left: auto
+              min-width: 150px
+              @extend %box-small
+
+              .men
+                word-wrap: break-word
+
+              .women
+                word-wrap: break-word
+
+        .main-persons
+          width: 100%
+          display: flex
+          flex-direction: column
+
+          .main-judge
+            display: flex
+            flex-direction: row
+            margin: 5px 0px
+            @extend %box-medium
+
+            .title
+              margin: 4px
+
+            .body
+              min-width: 150px
+              margin-left: auto
+              @extend %box-small
+
+          .main-secretary
+            display: flex
+            flex-direction: row
+            margin: 5px 0px
+            @extend %box-medium
+
+            .title
+              margin: 4px
+
+            .body
+              min-width: 150px
+              margin-left: auto
+              @extend %box-small
+
+      .buttons
+        margin: auto
+        display: flex
+        flex-direction: row
+        width: 100%
+
+
+.competition-focused
+  width: 100%
+  min-width: 950px
+
+  .change-select
+    @extend %box-medium
+    margin: 10px 0px
+
+  .header-competition
+    min-width: 300px
+    margin: 5px auto
+    display: flex
+    flex-direction: column
+
+
+    .info
+      display: flex
+      flex-direction: column
+      @extend %box-medium
+
+      .dates-and-location
+        width: 100%
+        display: flex
+        flex-direction: row
+
+        .location
+          .box
+            margin: 4px
+            @extend %box-small
+
+        .dates
+          .box
+            margin: 4px
+            @extend %box-small
+
+      .name-ages
+        width: 100%
+        margin: 5px auto
+
+        .body
+          display: flex
+          flex-direction: column
+          min-width: 150px
+          justify-content: left
+
+
+          .name
+            font-size: 120%
+            @extend %box-small
+            margin: 5px
+            text-align: left
+
+          .ages
+            margin: 5px
+
+      .gender-weight
+        margin: 5px auto
+        width: 100%
+
+        .box
+          display: flex
+          flex-direction: row
+
+          .title
+            margin: 4px
+
+          .body
+            margin-left: auto
+            min-width: 150px
+            @extend %box-small
+
+            .men
+              word-wrap: break-word
+
+            .women
+              word-wrap: break-word
+
+      .main-persons
+        width: 100%
+        display: flex
+        flex-direction: row
+
+        .main-judge
+          display: flex
+          flex-direction: row
+          margin: 5px
+
+          .title
+            margin: 4px
+
+          .body
+            display: flex
+            justify-content: center
+            min-width: 150px
+            margin-left: auto
+            @extend %box-small
+
+        .main-secretary
+          display: flex
+          flex-direction: row
+          margin: 5px
+
+          .title
+            margin: 4px
+
+          .body
+            display: flex
+            justify-content: center
+            min-width: 150px
+            margin-left: auto
+            @extend %box-small
+
+    .buttons
+      margin: 5px 0px
+      @extend %box-medium
+      display: flex
+      flex-direction: row
+
+      button
+        @extend %width-fill
+        margin: 0px 2px
+
+
+  .table-weighing
+    @extend %box-medium
+    margin: 5px 0px
+    padding: 8px
+
+    .buttons
+      margin: 5px 0px
+      display: flex
+      flex-direction: row
+
+      .post-and-add
+        @extend %width-fill
+
+      button
+        @extend %width-fill
+        margin: 0px 2px
+
+    table
+      border: 2px solid
+      border-collapse: collapse
+      word-break: break-word
+      width: 100%
+
+      thead
+        background: $background-small
+
+        tr
+
+          td
+            border: 1px solid
+            padding: 3px
+
+          .num
+            text-align: center
+
+          .dateBirth
+            text-align: center
+
+          .department
+            text-align: center
+
+          .locationRegion
+            text-align: center
+
+          .locationCity
+            text-align: center
+
+          .athleteRank
+            text-align: center
+
+            .trainers
+      tbody
+        background: white
+        tr
+          td
+            border: 1px solid
+            padding: 3px
+          .num
+            width: 4%
+            text-align: center
+          .dateBirth
+            width: 9%
+            text-align: center
+          .department
+            width: 8%
+            text-align: center
+          .locationRegion
+            width: 10%
+            text-align: center
+          .locationCity
+            width: 10%
+            text-align: center
+          .athleteRank
+            width: 12%
+            text-align: center
+          .trainers
+            width: 15%
